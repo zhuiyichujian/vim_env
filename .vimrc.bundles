@@ -1,0 +1,303 @@
+Bundle 'luochen1990/rainbow'
+"代码模版
+Bundle 'aperezdc/vim-template'
+"gist 代码片段管理
+Bundle 'mattn/gist-vim'
+"操作数据
+Bundle 'dbext.vim'
+"远程编辑
+Bundle 'netrw.vim'
+" Define bundles via Github repos
+Bundle 'christoomey/vim-run-interactive'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'croaky/vim-colors-github'
+Bundle 'danro/rename.vim'
+Bundle 'majutsushi/tagbar'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'kien/ctrlp.vim'
+Bundle 'pbrisbin/vim-mkdir'
+Bundle 'scrooloose/syntastic'
+Bundle 'slim-template/vim-slim'
+Bundle 'thoughtbot/vim-rspec'
+Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-surround'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'vim-scripts/ctags.vim'
+Bundle 'vim-scripts/matchit.zip'
+Bundle 'vim-scripts/tComment'
+Bundle "mattn/emmet-vim"
+Bundle "scrooloose/nerdtree"
+Bundle "Lokaltog/vim-powerline"
+Bundle "godlygeek/tabular"
+Bundle "msanders/snipmate.vim"
+Bundle "jelera/vim-javascript-syntax"
+Bundle "altercation/vim-colors-solarized"
+Bundle "othree/html5.vim"
+Bundle "xsbeats/vim-blade"
+Bundle "Raimondi/delimitMate"
+Bundle "groenewege/vim-less"
+"Bundle "evanmiller/nginx-vim-syntax"
+Bundle "rhowardiv/nginx-vim-syntax"
+"Bundle "Lokaltog/vim-easymotion"
+Bundle "tomasr/molokai"
+Bundle "klen/python-mode"
+"对齐
+Bundle 'junegunn/vim-easy-align'
+" 快速跳转
+Bundle 'easymotion/vim-easymotion'
+" " 模糊查找文件，buffer，tags等，比ctrlp，unite，fzf等好用多了
+Bundle 'Yggdroot/LeaderF'
+" " 对齐代码的虚线，写Python尤其需要
+Bundle 'Yggdroot/indentLine'
+" " 用不同颜色高亮单词或选中块
+Bundle 'Yggdroot/vim-mark'
+" " grep 文本，用过ag.vim, ack.vim还有grepxxx等，感觉是最好用的一个
+Bundle 'dyng/ctrlsf.vim'
+Bundle 'Chiel92/vim-autoformat'
+Bundle "tpope/vim-commentary"
+Bundle "vim-scripts/taglist.vim"
+Bundle 'plasticboy/vim-markdown'
+Bundle 'suan/vim-instant-markdown'
+Bundle 'isnowfy/python-vim-instant-markdown'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
+Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'junegunn/fzf'
+Plugin 'rking/ag.vim'
+Plugin 'w0rp/ale'
+Plugin 'vim-airline/vim-airline'
+Plugin 'junegunn/limelight.vim'
+Plugin 'justinmk/vim-sneak'
+Plugin 'haya14busa/incsearch.vim'
+Plugin 'mhinz/vim-signify'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'gregsexton/gitv'
+Plugin 'terryma/vim-smooth-scroll'
+Plugin 'terryma/vim-expand-region'
+Plugin 'terryma/vim-multiple-cursors'
+" 作者：Yggdroot
+" 链接：https://www.zhihu.com/question/23590572/answer/191440824
+" 来源：知乎
+" 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+let g:rainbow_conf = {
+	\	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+	\	'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+	\	'operators': '_,_',
+	\	'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+	\	'separately': {
+	\		'*': {},
+	\		'tex': {
+	\			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+	\		},
+	\		'lisp': {
+	\			'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+	\		},
+	\		'vim': {
+	\			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+	\		},
+	\		'html': {
+	\			'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+	\		},
+	\		'css': 0,
+	\	}
+	\}
+let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'  "设置全局配置文件的路径
+let g:ycm_key_invoke_completion = '<C-a>' " ctrl + a 触发补全
+let g:Powerline_symbols = 'fancy'
+" 自动补全配置
+set completeopt=longest,menu    "让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
+"youcompleteme  默认tab  s-tab 和自动补全冲突
+"let g:ycm_key_list_select_completion=['<c-n>']
+let g:ycm_key_list_select_completion = ['<Down>']
+"let g:ycm_key_list_previous_completion=['<c-p>']
+let g:ycm_key_list_previous_completion = ['<Up>']
+let g:ycm_confirm_extra_conf=1 "关闭加载.ycm_extra_conf.py提示
+
+let g:ycm_collect_identifiers_from_tags_files=1 " 开启 YCM 基于标签引擎
+let g:ycm_min_num_of_chars_for_completion=2 " 从第2个键入字符就开始罗列匹配项
+let g:ycm_cache_omnifunc=0  " 禁止缓存匹配项,每次都重新生成匹配项
+let g:ycm_seed_identifiers_with_syntax=1    " 语法关键字补全
+nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>    "force recomile with syntastic
+"nnoremap <leader>lo :lopen<CR> "open locationlist
+"nnoremap <leader>lc :lclose<CR>    "close locationlist
+inoremap <leader><leader> <C-x><C-o>
+"离开插入模式后自动关闭预览窗口"
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+"回车即选中当前项"
+"inoremap <expr> <CR>       pumvisible() ? '<C-y>' : '\<CR>'
+"上下左右键行为"
+inoremap <expr> <Down>     pumvisible() ? '\<C-n>' : '\<Down>'
+inoremap <expr> <Up>       pumvisible() ? '\<C-p>' : '\<Up>'
+inoremap <expr> <PageDown> pumvisible() ? '\<PageDown>\<C-p>\<C-n>' : '\<PageDown>'
+inoremap <expr> <PageUp>   pumvisible() ? '\<PageUp>\<C-p>\<C-n>' : '\<PageUp>'
+
+"在注释输入中也能补全
+let g:ycm_complete_in_comments = 1
+"在字符串输入中也能补全
+let g:ycm_complete_in_strings = 1
+"注释和字符串中的文字也会被收入补全
+let g:ycm_collect_identifiers_from_comments_and_strings = 0
+
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR> " 跳转到定义处
+" #####YouCompleteMe Configure
+nnoremap gl :YcmCompleter GoToDeclaration
+nnoremap gf :YcmCompleter GoToDefinition
+"nnoremap gg :YcmCompleter GoToDefinitionElseDeclaration
+"for ycm
+let g:ycm_error_symbol = '>>'
+let g:ycm_warning_symbol = '>*'
+"nmap :YcmDiags
+
+
+"按F5运行python"
+map <F5> :Autopep8<CR> :w<CR> :call RunPython()<CR>
+function RunPython()
+  let mp = &makeprg
+  let ef = &errorformat
+  let exeFile = expand("%:t")
+  setlocal makeprg=python\ -u
+  set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+  silent make %
+  copen
+  let &makeprg = mp
+  let &errorformat = ef
+endfunction
+
+" 设置tagbar的窗口宽度
+let g:tagbar_width=30
+" 映射Tagbar的快捷键,按F6自动打开
+map <F6> :TagbarToggle<CR>
+
+" 设置autoformat
+nnoremap <F7> :Autoformat<CR>
+let g:autoformat_autoindent = 0
+let g:autoformat_retab = 0
+let g:autoformat_remove_trailing_spaces = 0
+" 代码检查工具
+"let g:ale_fix_on_save = 1
+"let g:ale_completion_enabled = 1
+"let g:ale_sign_column_always = 1
+"let g:airline#extensions#ale#enabled = 1
+
+"按F9运行python调试"
+map <F9> :Autopep8<CR> :w<CR> :call RunPythonDebug()<CR>
+function RunPythonDebug()
+  let mp = &makeprg
+  let ef = &errorformat
+  let exeFile = expand("%:t")
+  setlocal makeprg=python\ -m\ pdb
+  set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+  silent make %
+  copen
+  let &makeprg = mp
+  let &errorformat = ef
+endfunction
+
+"python解释器路径"
+"let g:ycm_path_to_python_interpreter='/Users/moxian/anaconda3/bin/python'
+let g:ycm_autoclose_preview_window_after_completion=1
+"YouCompleteMe clang settings
+let g:clang_format#style_options = {
+             \ "AccessModifierOffset" : -4,
+             \ "AllowShortIfStatementsOnASingleLine" : "true",
+             \ "AlwaysBreakTemplateDeclarations" : "true",
+             \ "Standard" : "C++11"}
+let g:clang_format#auto_format=1
+
+"Nerd tree
+"F2开启和关闭树"
+map <F2> :NERDTreeToggle<CR>
+let NERDTreeChDirMode=1
+"显示书签"
+let NERDTreeShowBookmarks=1
+"设置忽略文件类型"
+let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
+"窗口大小"
+let NERDTreeWinSize=25
+
+"缩进指示线"
+let g:indentLine_char='┆'
+let g:indentLine_enabled = 1
+"autopep8设置"
+let g:autopep8_disable_show_diff=1
+autocmd Filetype python noremap <buffer> <F8> :call Autopep8()<CR>
+
+map <F4> <leader>ci <CR>
+map <F10> ms:call AddAuthor()<cr>'S
+
+function AddAuthor()
+    let n=1
+    while n < 11
+        let line = getline(n)
+        if line=~'[#]*\s*\*\s*\S*Last\s*modified\s*:\s*\S*.*$'
+        call UpdateTitle()
+        return
+    endif
+    let n = n + 1
+    endwhile
+    if &filetype == 'sh'
+        call AddTitleForShell()
+    elseif &filetype == 'python'
+        call AddTitleForPython()
+    else
+        call AddTitleForC()
+    endif
+
+endfunction
+
+
+function UpdateTitle()
+    normal m'
+    execute '/* Last modified\s*:/s@:.*$@\=strftime(": %Y-%m-%d %H:%M")@'
+    normal mk
+    execute '/* Filename\s*:/s@:.*$@\=": ".expand("%:t")@'
+    execute "noh"
+    normal 'k
+    echohl WarningMsg | echo "Successful in updating the copy right." |echohl None
+endfunction
+
+function AddTitleForC()
+    call append(0,"/**********************************************************")
+    call append(1," * Author        : Aiker Zhao")
+    call append(2," * Email         : donxan@gmail.com")
+    call append(3," * Create time   : ".strftime("%Y-%m-%d %H:%M"))
+    call append(4," * Last modified : ".strftime("%Y-%m-%d %H:%M"))
+    call append(5," * Filename      : ".expand("%:t"))
+    call append(6," * Description   : ")
+    call append(7," * *******************************************************/")
+    echohl WarningMsg | echo "Successful in adding the copyright." | echohl None
+endfunction
+
+"" add comment for Python
+function AddTitleForPython()
+    call append(0,"#!/usr/bin/python")
+    call append(1,"# -*- coding: UTF-8 -*-")
+    call append(2,"")
+    call append(3,"# **********************************************************")
+    call append(4,"# * Author        : Aiker Zhao")
+    call append(5,"# * Email         : donxan@gmail.com")
+    call append(6,"# * Create time   : ".strftime("%Y-%m-%d %H:%M"))
+    call append(7,"# * Last modified : ".strftime("%Y-%m-%d %H:%M"))
+    call append(8,"# * Filename      : ".expand("%:t"))
+    call append(9,"# * Description   : ")
+    call append(10,"# **********************************************************")
+    echohl WarningMsg | echo "Successful in adding the copyright." | echohl None
+endfunction
+
+"" add conment for shell
+function AddTitleForShell()
+    call append(0,"#!/bin/bash")
+    call append(1,"# **********************************************************")
+    call append(2,"# * Author        : Aiker Zhao")
+    call append(3,"# * Email         : donxan@gmail.com")
+    call append(4,"# * Create time   : ".strftime("%Y-%m-%d %H:%M"))
+    call append(5,"# * Last modified : ".strftime("%Y-%m-%d %H:%M"))
+    call append(6,"# * Filename      : ".expand("%:t"))
+    call append(7,"# * Description   : ")
+    call append(8,"# **********************************************************")
+endfunction
