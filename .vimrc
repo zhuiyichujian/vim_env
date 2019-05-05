@@ -1,4 +1,8 @@
 " Configuration file for vim
+" 设置主题
+colorschem Bgreen
+syntax enable
+"colorscheme solarized
 set encoding=utf-8
 set modelines=0" CVE-2007-2438
 set nocompatible " 关闭 vi 兼容模式
@@ -129,3 +133,14 @@ augroup END
 
 set makeprg=make\ -C\ -j64
 nnoremap <F3> :make!<cr>
+
+
+"let g:solarized_termcolors=256
+"let g:solarized_termtrans = 1
+"let g:solarized_degrade = 1
+"let g:solarized_bold = 1
+"let g:solarized_underline = 1
+"let g:solarized_italic = 1
+"let g:solarized_contrast = "high"
+""let g:solarized_contrast = "normal"
+"let g:solarized_visibility= "normal"
