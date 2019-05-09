@@ -17,6 +17,14 @@ Plugin 'VundleVim/Vundle.vim'
 
 call vundle#end()
 
+
+"call plug#begin('~/.vim/plugged')
+"" Initialize plugin system
+"
+"if filereadable(expand("~/.vimrc.plug"))
+"source ~/.vimrc.plug
+"endif
+"call plug#end()
 syntax on " 自动语法高亮
 " 用浅色高亮当前行
 autocmd InsertLeave * se nocul
