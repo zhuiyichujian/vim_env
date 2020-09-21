@@ -14,8 +14,19 @@ if filereadable(expand("~/.vimrc.bundles"))
 source ~/.vimrc.bundles
 endif
 Plugin 'VundleVim/Vundle.vim'
-
 call vundle#end()
+
+"call plug#begin('~/.vim/plugged')
+"Plug 'junegunn/vim-easy-align'
+"Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+"Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+"Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+"Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+"Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+"Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
+"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+"Plug '~/my-prototype-plugin'
+"call plug#end()
 
 syntax on " 自动语法高亮
 " 用浅色高亮当前行
@@ -67,18 +78,18 @@ set cmdheight=1" 设定命令行的行数为 1
 set laststatus=2" 显示状态栏 (默认值为 1, 无法显示状态栏)
 set statusline=\%<%F[%1*%M%*%n%R%H]%=\%y\ %0(%{&fileformat}\ %{&encoding}\ %c:%l/%L%)\
 " 设置在状态行显示的信息
-set foldenable " 开始折叠
-set foldmethod=syntax " 设置语法折叠
-set foldcolumn=0 " 设置折叠区域的宽度
-setlocal foldlevel=1 " 设置折叠层数为
-set foldclose=all " 设置为自动关闭折叠 
- nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
+"set foldenable " 开始折叠
+"set foldmethod=syntax " 设置语法折叠
+"set foldcolumn=0 " 设置折叠区域的宽度
+"setlocal foldlevel=1 " 设置折叠层数为
+"set foldclose=all " 设置为自动关闭折叠 
+nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 set confirm" 在处理未保存或只读文件的时候，弹出确认
 set noexpandtab" 不要用空格代替制表符
 set history=50 " 历史纪录数
 set gdefault " 行内替换
 set encoding=utf-8
-set fileencodings=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936,utf-16,big5,euc-jp,latin1 " 编码设置
+set fileencodings=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936,big5,euc-jp,latin1,ASCII " 编码设置
 "set guifont=Menlo:h16:cANSI " 设置字体
 "set langmenu=zn_CN.UTF-8
 set helplang=cn " 语言设置

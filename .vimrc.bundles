@@ -37,31 +37,31 @@ Bundle "jelera/vim-javascript-syntax"
 Bundle "altercation/vim-colors-solarized"
 Bundle "othree/html5.vim"
 Bundle "xsbeats/vim-blade"
-Bundle "Raimondi/delimitMate"
+"Bundle "Raimondi/delimitMate"
 Bundle "groenewege/vim-less"
 "Bundle "evanmiller/nginx-vim-syntax"
 Bundle "rhowardiv/nginx-vim-syntax"
 "Bundle "Lokaltog/vim-easymotion"
 Bundle "tomasr/molokai"
 Bundle "klen/python-mode"
-"对齐
+""对齐
 Bundle 'junegunn/vim-easy-align'
-" 快速跳转
+"" 快速跳转
 Bundle 'easymotion/vim-easymotion'
-" " 模糊查找文件，buffer，tags等，比ctrlp，unite，fzf等好用多了
+"" " 模糊查找文件，buffer，tags等，比ctrlp，unite，fzf等好用多了
 Bundle 'Yggdroot/LeaderF'
-" " 对齐代码的虚线，写Python尤其需要
+"" " 对齐代码的虚线，写Python尤其需要
 Bundle 'Yggdroot/indentLine'
-" " 用不同颜色高亮单词或选中块
+"" " 用不同颜色高亮单词或选中块
 Bundle 'Yggdroot/vim-mark'
-" " grep 文本，用过ag.vim, ack.vim还有grepxxx等，感觉是最好用的一个
+"" " grep 文本，用过ag.vim, ack.vim还有grepxxx等，感觉是最好用的一个
 Bundle 'dyng/ctrlsf.vim'
 Bundle 'Chiel92/vim-autoformat'
 Bundle "tpope/vim-commentary"
 Bundle "vim-scripts/taglist.vim"
-"Bundle 'plasticboy/vim-markdown'
-"Bundle 'suan/vim-instant-markdown'
-Bundle 'isnowfy/python-vim-instant-markdown'
+Bundle 'plasticboy/vim-markdown'
+Bundle 'suan/vim-instant-markdown'
+"Bundle 'isnowfy/python-vim-instant-markdown'
 Plugin 'L9'
 Plugin 'FuzzyFinder'
 Plugin 'git://git.wincent.com/command-t.git'
@@ -81,8 +81,8 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'jiazhoulvke/MarkdownView'
 Plugin 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 "Plugin 'iamcco/markdown-preview.vim'
-"Plugin 'iamcco/mathjax-support-for-mkdp'
-Bundle 'tamlok/vim-markdown'
+Plugin 'iamcco/mathjax-support-for-mkdp'
+"Bundle 'tamlok/vim-markdown'
 Bundle 'joker1007/vim-markdown-quote-syntax'
 Plugin 'jszakmeister/markdown2ctags'
 
